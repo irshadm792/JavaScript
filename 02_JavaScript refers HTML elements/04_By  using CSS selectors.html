@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+ <meta charset="UTF-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <title>Document</title> 
+ <script type="text/javascript"> 
+ function bodyload(){ 
+ document.querySelector("img").src="../public/images/fashion1.jpg"; 
+ document.querySelector(".btn-register").value = "Register"; 
+ document.querySelector("#btnLogin").value = "Login"; 
+ } 
+ </script> 
+ <style> 
+ .btn-register { 
+ background-color: yellow; 
+ } 
+ </style> 
+</head> 
+<body onload="bodyload()"> 
+ <div> 
+ <img border="1" width="100" height="100"> 
+ </div> 
+ <div> 
+ <h3>Register</h3> 
+ <form name="frmRegister"> 
+ User Name :<input type="email" name="txtEmail"> <input class="btn-register" 
+type="button"> 
+ </form> 
+ </div> 
+ <div> 
+ <h3>Login</h3> 
+ <form name="frmLogin"> 
+ Mobile : <input type="text" name="txtName"> <input id="btnLogin" name="btnLogin" 
+type="button"> 
+ </form> 
+ </div> 10 
+</body> 
+</html> 
