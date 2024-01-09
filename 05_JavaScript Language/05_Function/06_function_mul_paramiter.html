@@ -1,0 +1,14 @@
+<script> 
+    function Details(title,...product){ 
+    var [name, price, stock, rating] = product; 
+    if(price){ 
+    
+   document.write(`<h2>${title}</h2>Name=${name}<br>Price=${price}<br>Stock=${stock}<br
+   >Rating=${rating.rate}`); 89 
+    } else { 
+    document.write(`Name=${name}<br>Stock=${stock}`); 
+    } 
+    } 
+    Details("Product Details","TV",45000,true,{rate:4.3}); 
+   </script> 
+   

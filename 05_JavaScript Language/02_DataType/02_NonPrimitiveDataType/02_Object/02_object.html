@@ -1,0 +1,14 @@
+<!--for(var property in object) { } -->
+
+<script> 
+
+    fetch("http://fakestoreapi.com/products/1") 
+    .then(function(res){ 
+    return res.json(); 
+    }) 
+    .then(function(product){
+    for(var property in product){ 
+    document.write(`${property}<br>`); 
+    } 
+    }) 
+ </script>

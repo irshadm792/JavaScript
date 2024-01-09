@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+ <meta charset="UTF-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <title>Document</title> 
+ <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css"> 
+ <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"> 
+ <script> 
+ var count = 0; 
+ function Loading(){ 
+ count++; 
+ document.querySelector("progress").value = count; 
+ document.getElementById("status").innerHTML = `${count} % Completed`; 
+ if(count==100){ 
+ document.getElementById("loadingContainer").style.display = "none"; 
+ document.getElementById("imageContainer").style.display = "block"; 
+ document.querySelector("h2").innerHTML = "Image Loaded"; 
+ } 
+ } 
+ var timer; 
+ function LoadImageClick(){ 
+ document.getElementById("btnContainer").style.display = "none"; 
+ document.getElementById("loadingContainer").style.display = "block"; 
+ timer = setInterval(Loading,100); 
+ document.querySelector("h2").innerHTML = "Loading Image"; 
+ } 
+ function StartClick(){ 
+ timer = setInterval(Loading,100); 
+ document.querySelector("h2").innerHTML = "Loading Image"; 
+ } 
+ function PauseClick(){ 
+ clearInterval(timer); 
+ document.querySelector("h2").innerHTML = "Loading Paused"; 
+ } 
+ </script> 
+ <style> 
+ progress { 
+ width: 250px; 
+ height: 40px; 
+ } 
+ </style> 
+</head> 
+<body class="container-fluid d-flex justify-content-center align-items-center" style="height: 
+100vh;"> 
+ <div> 
+ <h2></h2> 
+ <div id="btnContainer"> 
+ <button class="btn btn-primary" onclick="LoadImageClick()">Load Image</button> 
+ </div> 
+ <div id="loadingContainer" style="display: none;" class="text-center"> 
+ <div><progress min="1" max="100" value="1"></progress></div> 
+ <div> <button class="bi bi-play btn btn-success" onclick="StartClick()"></button> 
+<button class="bi bi-pause btn btn-danger" onclick="PauseClick()"></button></div> 
+ <div id="status"></div> 
+ </div> 
+ <div id="imageContainer" style="display: none;"> 
+ <img src="/image/BookStoreimg.webp" width="300" height="400"> 
+ </div> 
+ </div> 
+</body> 
+</html> 

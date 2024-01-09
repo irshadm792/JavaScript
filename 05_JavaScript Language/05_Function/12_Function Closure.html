@@ -1,0 +1,11 @@
+<script> 
+    function Outer(){ 
+    let x = 10; 
+    function Inner(){ 
+    let y = 20; 
+    return x + y; 
+    } 
+    document.write(`Addition=${Inner()}`); 
+    } 
+    Outer(); 
+   </script> 

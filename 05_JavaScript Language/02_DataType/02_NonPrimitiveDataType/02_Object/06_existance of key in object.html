@@ -1,0 +1,10 @@
+<script> 
+    fetch("http://fakestoreapi.com/products/1") 
+    .then(function(res){ 
+    return res.json(); 
+    }) 
+    .then(function(product){ 
+    document.write(`Is fakestore product having price details ? ${"price" in product}`); 
+    }) 
+    
+   </script> 

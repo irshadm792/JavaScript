@@ -1,0 +1,15 @@
+<script> 
+    var result = function(){}; 
+    var password = prompt("Enter Password"); 
+    if(password==="admin"){ 
+    result = function(){ 
+    document.write(`Login Success..`); 
+    } 
+    } else { 
+    result = function(){ 
+    document.write(`Invalid Credential<br>`);  
+    document.write(`Try Again <a href="functions.html"> Click </a>`) 
+    } 
+    } 
+    result(); 
+   </script> 

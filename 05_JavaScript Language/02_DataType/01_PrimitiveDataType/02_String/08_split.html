@@ -1,0 +1,15 @@
+<!--Ex: New Destructuring Technique -->
+<script> 
+ var contacts = "john-999838382, david-9994828272"; 
+ var [john, david] = contacts.split(','); 
+ document.write(john + "<br>"); 
+ document.write(david); 
+</script> 
+<br>
+<!--Ex: Old Technique -->
+
+<script> 
+ var contacts = "john-999838382, david-9994828272"; 
+ var result = contacts.split(','); 
+ document.write(result[0] + "<br>" + result[1]); 
+</script> 

@@ -1,0 +1,26 @@
+ <script>
+    function Hello(uname) 
+ { 
+ document.write(`Hello ! ${uname}`); 
+ } 
+ var Hello = uname => document.write(`Hello ! {uname}`); 
+ var Hello = (uname, age) => document.write(`Hello ! ${uname} your age ${age}`);
+ </script> 
+
+<br>
+<script> 
+ var addition = (a,b) => a + b; 
+ document.write("addition=" + addition(20,30)); 
+</script>
+ 
+ <br>
+
+<script> 
+ fetch("http://fakestoreapi.com/products") 
+ .then(response=>response.json()) 
+ .then(products=>{ 
+ products.map(product=>{ 
+ document.write(product.title + "<br>"); 
+ }) 
+ }) 
+</script> 

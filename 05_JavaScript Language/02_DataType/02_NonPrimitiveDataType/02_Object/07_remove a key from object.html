@@ -1,0 +1,11 @@
+<script> 
+    fetch("http://fakestoreapi.com/products/1") 
+    .then(function(res){ 
+    return res.json(); 
+    }) 
+    .then(function(product){ 
+    delete product.price; 
+    document.write(`Title : ${product.title} <br>Price :${product.price}`); 
+    }) 
+    
+   </script> 

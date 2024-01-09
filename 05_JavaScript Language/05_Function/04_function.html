@@ -1,0 +1,18 @@
+<script> 
+    function Demo(product){ 
+    document.write(` 
+    Name : ${product.Name} <br> 
+    Price: ${product.Price} 
+    `); 
+    } 
+    Demo({Name:"Samsung TV", Price:45000.33}); 
+   </script> 
+
+   <br>
+
+   <script> 
+    function Demo(print){ 
+    print(); 
+    } 
+    Demo(function(){document.write("Hello ! World")}); 
+   </script> 

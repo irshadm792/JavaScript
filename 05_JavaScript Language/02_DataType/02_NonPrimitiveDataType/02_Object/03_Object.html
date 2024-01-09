@@ -1,0 +1,17 @@
+<!----
+Object.keys(objectName) => [ ] 
+.map(function(key){ 
+}) -->
+
+<script> 
+    fetch("http://fakestoreapi.com/products/1") 
+    .then(function(res){ 
+    return res.json(); 
+    }) 
+    .then(function(product){ 
+    Object.keys(product).map(function(key){ 
+    document.write(key + "<br>"); 
+    }) 
+    }) 
+    
+   </script> 

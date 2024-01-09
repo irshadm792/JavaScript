@@ -1,0 +1,16 @@
+<script> 
+    var categories = ["All", "Electronics", "Footwear"]; 
+    categories.forEach(function(category, index){ 
+    document.write(`<li>${category}[${index}]</li>`) 
+    }) 
+   </script> 
+   
+   <br>
+
+   <script> 
+    var sales = [45000, 42100, 67000, 68000, 23000]; 
+    var result = sales.filter(function(value){ 
+    return value>60000; 
+    }); 
+    document.write(result); 
+   </script> 

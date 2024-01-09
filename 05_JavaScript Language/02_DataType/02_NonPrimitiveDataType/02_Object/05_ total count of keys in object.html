@@ -1,0 +1,9 @@
+<script> 
+    fetch("http://fakestoreapi.com/products/1") 
+    .then(function(res){ 
+    return res.json(); 
+    }) 
+    .then(function(product){ 
+    document.write(`Total Number of Keys : ${Object.keys(product).length}`); 
+    }) 
+</script>

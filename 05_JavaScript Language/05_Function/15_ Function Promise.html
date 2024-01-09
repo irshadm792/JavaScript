@@ -1,0 +1,16 @@
+<script> 
+    var GetAPI = new Promise(function(resolve,reject){ 
+    var url = prompt("Enter Url"); 
+    if(url=="http://fakestoreapi.com"){ 
+    resolve("Data Fetched Successfully.."); 
+    } else { 
+    reject("Unable to fetch data"); 94 
+    } 
+    }); 
+    GetAPI.then(function(res){ 
+    document.write(`Succes: ${res}`); 
+    }) 
+    .catch(function(exp){ 
+    document.write(`Error: ${exp}`); 
+    }) 
+   </script> 

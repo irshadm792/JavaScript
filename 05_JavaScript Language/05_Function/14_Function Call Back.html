@@ -1,0 +1,14 @@
+<script> 
+    function GetAPI(url,success,failure){ 93 
+    if(url=="http://fakestoreapi.com"){ 
+    success(); 
+    } else { 
+    failure(); 
+    } 
+    } 
+    GetAPI(prompt("Enter Url"), function(){ 
+    document.write("Data Fetched Successfully.."); 
+    }, function(){ 
+    document.write("Error : Unable to fetch"); 
+    }) 
+   </script> 
