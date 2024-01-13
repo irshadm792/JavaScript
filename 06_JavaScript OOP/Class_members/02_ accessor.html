@@ -1,0 +1,21 @@
+<script> 
+    class Product 
+    { 
+    Name = "Samsung TV"; 
+    Rating = { 
+    VendorRating: { 
+    DirectVendor : {Rate:4.2, Count:3200}, 
+    InDirectVendor: {Rate:4.5, Count: 500} 
+    } 
+    } 
+    get InDirectVendorRating(){ 
+    return this.Rating.VendorRating.InDirectVendor.Rate; 
+    } 
+    set InDirectVendorRating(newRating){ 
+    this.Rating.VendorRating.InDirectVendor.Rate = newRating; 
+    } 
+    } 
+    let obj = new Product(); 
+    obj.InDirectVendorRating = 5; 
+    document.write("Rating=" + obj.InDirectVendorRating); 
+   </script>

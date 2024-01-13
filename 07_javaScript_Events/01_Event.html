@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+ <meta charset="UTF-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <title>Document</title> 
+ <script> 
+ function InsertClick(obj, e){ 
+ document.write(` 
+ Button Id: ${obj.id} <br> 
+ Button Value: ${obj.value} <br> 
+ Class Name : ${obj.className} <br> 
+ X Position : ${e.clientX} <br> 
+ Ctrl Key : ${e.ctrlKey} 
+ `); 
+ } 
+ </script> 
+</head> 
+<body> 
+ <button onclick="InsertClick(this,event)" id="btnInsert" value="Insert" class="btn btn-primary">Insert</button> 
+</body> 
+</html> 

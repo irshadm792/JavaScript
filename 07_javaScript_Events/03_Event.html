@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+ <meta charset="UTF-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <title>Document</title> 
+ <script> 
+ function Database(value){ 
+ switch(value){ 
+ case "Insert": 
+ document.write("Record Inserted"); 
+ break; 
+ case "Update": 
+ document.write("Record Updated"); 
+ break; 
+ case "Delete": 
+ document.write("Record Deleted"); 
+ break; 
+ } 
+ } 
+ </script> 
+</head> 
+<body> 
+ <button value="Insert" onclick="Database(this.value)">Insert</button> 
+ <button value="Update" onclick="Database(this.value)">Update</button> 
+ <button value="Delete" onclick="Database(this.value)">Delete</button> 
+</body> 
+</html> 

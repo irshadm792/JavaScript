@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+ <meta charset="UTF-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <title>Document</title> 
+ <script> 
+ function ViewImage(){ 
+ window.open("../public/image/BookStoreimg.webp","Realme","width=300 height=400"); 
+ } 121 
+ document.oncontextmenu = function(){ 
+ alert(`Right Click Not Allowed`); 
+ return false; 
+ } 
+ document.onselectstart = function(){ 
+ return false; 
+ } 
+ </script> 
+</head> 
+<body> 
+ <p>Right click & selection diabled</p> 
+ <img ondblclick="ViewImage()" src="../public/image/BookStoreimg.webp" width="200" 
+height="200"> 
+ <p>Double click to view large</p> 
+</body> 
+</html> 

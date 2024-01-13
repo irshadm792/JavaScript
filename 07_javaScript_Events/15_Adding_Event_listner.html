@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+ <meta charset="UTF-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <title>Document</title> 
+ <script> 
+ function ChangeEvent(){ 
+ var eventName = document.querySelector("select").value; 
+ document.getElementById("btnInsert").addEventListener(eventName, function(){ 
+ document.write("Record Inserted"); 
+ }) 
+ } 
+ </script> 
+</head> 
+<body> 
+ <div> 
+ <select onchange="ChangeEvent()"> 
+ <option>Select Event</option> 
+ <option value="mouseover">Mouse Over</option> 
+ <option value="click">On Click</option> 
+ </select> 
+ </div> 
+ <br><br><br> 
+ <button id="btnInsert">Insert</button> 
+</body> 
+</html> 
